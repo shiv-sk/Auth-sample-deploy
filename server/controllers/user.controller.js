@@ -88,7 +88,7 @@ exports.register = asyncHandler(async (req,res)=>{
     const options = {
         httpOnly:true,
         secure:true,
-        sameSite:"strict",
+        sameSite: "None",
     }
     return res.status(201).cookie("accessToken" , accessToken , options).json(
         new ApiResponse("user is created" , user , 201)
@@ -110,7 +110,7 @@ exports.login = asyncHandler(async(req,res)=>{
     const options = {
         httpOnly:true,
         secure:true,
-        sameSite:"strict",
+        sameSite: "None",
     }
     const accessToken = Token(user);
     return res.status(200).cookie("accessToken" , accessToken , options).json(
