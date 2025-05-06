@@ -5,7 +5,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 
 
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = ["http://localhost:3000" , "https://auth-sample-deploy.vercel.app/"];
 const corsOption = {
     origin:function(origin , callback){
         if(!origin || allowedOrigins.includes(origin)){
